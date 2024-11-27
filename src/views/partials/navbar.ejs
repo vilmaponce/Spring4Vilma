@@ -1,0 +1,70 @@
+<header>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            /* Fondo general */
+            color: #333;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #007BFF;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff6f61;
+        }
+
+        .home-background {
+            background-image: url('/img/universo.png');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .home-background h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #fff;
+        }
+    </style>
+
+    <nav>
+        <a href="/superheroes">Home</a>
+        <a href="/add-hero">Añadir Superhéroe</a>
+        <a href="#">Contacto</a>
+        <a href="#">Info</a>
+    </nav>
+</header>
+
+<!-- Home Section con Fondo -->
+<section class="home-background">
+    <h1>Bienvenidos a la Página de Superhéroes</h1>
+    <div class="home-background" style="background-image: url('/img/universo.png');"></div>
+</section>

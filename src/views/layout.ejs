@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>  <!-- Usamos la variable 'title' -->
+
+</head>
+<style>
+  /* styles.css */
+nav {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+</style>
+
+<body>
+  <!-- Incluir el Navbar -->
+  <%- include('partials/navbar') %>
+
+  <!-- Contenido principal de la página -->
+  <div class="content">
+      <%- body %> <!-- Aquí se incluirá el contenido específico de cada página -->
+  </div>
+
+  <!-- Incluir el Footer -->
+  <%- include('partials/footer') %>
+</body>
+
+</html>

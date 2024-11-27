@@ -1,0 +1,95 @@
+ <!-- Estilos internos -->
+ <style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+
+  h1 {
+    color: #007BFF;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    background-color: #deeedb;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+
+  strong {
+    font-size: 1.2em;
+  }
+
+  a,
+  button {
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+
+  a {
+    background-color: #e4237d;
+    color: white;
+  }
+
+  button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover,
+  a:hover {
+    opacity: 0.8;
+  }
+
+  @media (max-width: 600px) {
+    body {
+      font-size: 14px;
+    }
+
+    li {
+      padding: 5px;
+      font-size: 14px;
+    }
+  }
+</style>
+
+<form action="/superheroes/editar/<%= superheroe._id %>" method="POST">
+  <label for="heroName">Nombre del Superhéroe:</label>
+  <input name="heroName" value="<%= superheroe.nombreSuperHeroe %>">
+  
+  <label for="realName">Nombre Real:</label>
+  <input name="realName" value="<%= superheroe.nombreReal %>">
+  
+  <label for="heroAge">Edad:</label>
+  <input name="heroAge" value="<%= superheroe.edad %>">
+  
+  <label for="planetaOrigen">Planeta de Origen:</label>
+  <input name="planetaOrigen" value="<%= superheroe.planetaOrigen %>">
+  
+  <label for="debilidad">Debilidad:</label>
+  <input name="debilidad" value="<%= superheroe.debilidad %>">
+  
+  <!-- Convertir arrays en cadenas separadas por comas -->
+  <label for="poderes">Poderes (separados por coma):</label>
+  <input name="poderes" value="<%= superheroe.poderes.join(', ') %>">
+  
+  <label for="aliados">Aliados (separados por coma):</label>
+  <input name="aliados" value="<%= superheroe.aliados.join(', ') %>">
+  
+  <label for="enemigos">Enemigos (separados por coma):</label>
+  <input name="enemigos" value="<%= superheroe.enemigos.join(', ') %>">
+  
+  <!-- Botón para enviar el formulario -->
+  <button type="submit">Actualizar Superhéroe</button>
+</form>
